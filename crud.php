@@ -27,7 +27,14 @@
         header("location: cadastro.html");
 
         while($linhas = $comando->fetch()){
-            
+            $n = $linhas["nome"];
+            $m = $linhas["matricula"];
+            $i = $linhas["idade"];
+            if($i> 18) 
+            echo("<div class='D1'> $m $n $i </div>");
+        }
+        else{
+            header("Location: cadastro.html");
         }
     }    
 ?>
