@@ -5,7 +5,7 @@
     $nome = $_POST["nome"];
     $idade = $_POST["idade"];
 
-    if(isset($_POST["gravar"])){   
+    if(isset($_POST["inserir"])){   
         $comando = $pdo->prepare("INSERT INTO aluno Values($matricula,'$nome',$idade)");
         $resultado = $comando->execute();
         header("location: cadastro.html");
